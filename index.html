@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Directions - Presentación del Clan</title>
+
+    <!-- Fuente moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-main: #0f1116;
+            --bg-card: #191c23;
+            --accent: #d2b676;      /* dorado similar al pergamino */
+            --accent-soft: #3e7c89; /* toque azulado que combina con el orbe */
+            --text-main: #f5f5f5;
+            --text-muted: #b0b3c0;
+            --border-soft: #2a2e3a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", Arial, Helvetica, sans-serif;
+            background: radial-gradient(circle at top, #252934 0, #0b0c10 45%, #050608 100%);
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        /* Contenedor general */
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER / HERO */
+
+        header.hero {
+            padding: 24px 8vw 28px;
+            border-bottom: 1px solid #22252f;
+            background: linear-gradient(135deg, rgba(15,17,25,0.98), rgba(10,12,18,0.98));
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .hero-text h1 {
+            font-size: 2.3rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .hero-logo {
+            flex-shrink: 0;
+        }
+
+        .hero-logo img {
+            display: block;
+            max-height: 140px;
+            width: auto;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+        }
+
+        /* Layout principal */
+
+        main {
+            max-width: 1100px;
+            margin: 28px auto 40px;
+            padding: 0 8vw 0;
+            flex: 1;
+        }
+
+        section {
+            background: var(--bg-card);
+            margin-bottom: 20px;
+            padding: 20px 22px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+            border: 1px solid var(--border-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top left,
+                       rgba(210,182,118,0.14),
+                       transparent 55%);
+            opacity: 0.75;
+            pointer-events: none;
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: var(--accent);
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(210,182,118,0.35);
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        section h3 {
+            color: var(--accent-soft);
+            font-size: 1.05rem;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+        }
+
+        section p,
+        section li {
+            font-size: 0.96rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            position: relative;
+            z-index: 1;
+        }
+
+        .integrantes-lista {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .integrantes-lista li {
+            margin-bottom: 4px;
+            padding-left: 10px;
+            border-left: 2px solid rgba(210,182,118,0.5);
+        }
+
+        ul {
+            margin-left: 16px;
+        }
+
+        ul li {
+            margin-bottom: 4px;
+        }
+
+        strong {
+            color: var(--accent-soft);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 14px 0 20px;
+            border-top: 1px solid #22252f;
+            background: #080910;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .hero-inner {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+                letter-spacing: 0.18em;
+            }
+
+            main {
+                padding: 0 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>FIVE DIRECTIONS</h1>
+                <p>NRC: 11474</p>
+            </div>
+            <div class="hero-logo">
+                <!-- Guarda la imagen como "escudo-five-directions.png" en la misma carpeta -->
+                <img src="escudo-five-directions.png" alt="Escudo Five Directions">
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- 1. Integrantes -->
+        <section id="integrantes">
+            <h2>Integrantes del Clan</h2>
+            <ul class="integrantes-lista">
+                <li>Alonso Fuentes</li>
+                <li>Vicente Perez</li>
+                <li>Helios Rivas</li>
+                <li>Nicole Rueda</li>
+                <li>Briggit Sarmiento</li>
+            </ul>
+        </section>
+
+        <!-- 2. Escultura -->
+        <section id="escultura">
+            <h2>Ecosistemas de Colaboración Estratégica: Tejiendo la Red de tu Influencia</h2>
+            <p>
+                La escultura representa la Tierra como el punto central de la conexión humana. Su forma esférica
+                simboliza que el autoconocimiento emocional es la base para comprender a los demás y relacionarnos
+                exitosamente en cualquier parte del mundo.
+            </p>
+            <p>
+                Sobre la superficie se extienden <strong>cables</strong>, que funcionan como vías de intercambio continuo.
+                Estos representan flujos bidireccionales: información, apoyo, energía, mentoría u oportunidades.
+                No son solo conexiones físicas, sino un entramado vivo que refleja cómo operan hoy las redes humanas.
+            </p>
+            <p>
+                La composición también incluye <strong>cuatro computadores</strong>, cada uno representando un tipo de red
+                o pilar clave en las competencias emocionales y sociales:
+            </p>
+            <ul>
+                <li><strong>Pilar Intrapersonal – Conciencia de Sí Mismo</strong><br>
+                    Simboliza el autoconocimiento, el autocontrol y la motivación interna.</li>
+
+                <li><strong>Red Operacional – Coordinación y Tarea</strong><br>
+                    Representa la cooperación, la resolución de conflictos y la ejecución de tareas.</li>
+
+                <li><strong>Red Personal – Asesoramiento y Apoyo</strong><br>
+                    Relacionado con la mentoría, el desarrollo profesional y el soporte emocional externo.</li>
+
+                <li><strong>Red Estratégica – Visión y Liderazgo</strong><br>
+                    Enfocado en la influencia, la persuasión y la capacidad de movilizar personas hacia una visión común.</li>
+            </ul>
+        </section>
+
+        <!-- 3. Significado -->
+        <section id="significado">
+            <h2>Significado y relación con el tema asignado</h2>
+            <p>
+                La escultura utiliza sus elementos para representar el concepto de
+                <strong>Ecosistemas de Colaboración Estratégica</strong>, enfatizando que el networking no es solo crear
+                contactos, sino construir relaciones con propósito e impacto a largo plazo.
+            </p>
+
+            <p><strong>Engrudo Art Attack:</strong> simboliza la maleabilidad del carácter y la capacidad de desarrollar
+                habilidades sociales. Tal como plantea Daniel Goleman, las competencias emocionales pueden moldearse y
+                aprenderse, especialmente en la niñez.</p>
+
+            <p><strong>La esfera (la Tierra):</strong> representa la autoconciencia global: entender nuestras emociones es
+                la base para empatizar con otros y construir conexiones significativas sin fronteras geográficas.</p>
+
+            <p><strong>Los cables:</strong> reflejan el flujo constante de recursos dentro de una red estratégica:
+                apoyo, información, energía, mentoría y oportunidades que se intercambian de manera recíproca.</p>
+
+            <p><strong>Los computadores:</strong> representan los pilares fundamentales del networking: lo intrapersonal,
+                lo operacional, lo personal y lo estratégico, mostrando cómo cada uno contribuye al desarrollo de
+                relaciones efectivas y colaborativas.</p>
+
+            <p>
+                Así, la obra muestra que las conexiones humanas actuales trascienden lo físico gracias a la omnipresente
+                red digital, formando un sistema vivo y dinámico de colaboración.
+            </p>
+        </section>
+
+        <!-- 4. Competencias -->
+        <section id="competencias">
+            <h2>Competencias representadas</h2>
+
+            <p>La escultura refleja las siguientes competencias emocionales y sociales, alineadas con el modelo de Daniel Goleman:</p>
+
+            <h3>Competencias Intrapersonales</h3>
+            <ul>
+                <li>Autoconciencia</li>
+                <li>Autocontrol</li>
+                <li>Motivación personal</li>
+            </ul>
+
+            <h3>Competencias Interpersonales</h3>
+            <ul>
+                <li>Empatía</li>
+                <li>Cooperación</li>
+                <li>Asesoramiento</li>
+                <li>Dominio de las relaciones</li>
+            </ul>
+
+            <h3>Competencias Organizacionales</h3>
+            <ul>
+                <li>Resolución de conflictos</li>
+                <li>Coordinación de tareas</li>
+                <li>Trabajo en equipo</li>
+            </ul>
+
+            <h3>Competencias de Liderazgo</h3>
+            <ul>
+                <li>Influencia</li>
+                <li>Persuasión</li>
+                <li>Movilización de personas hacia una visión</li>
+                <li>Pensamiento estratégico</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        Documento de presentación del Clan Five Directions &copy;
+    </footer>
+</div>
+</body>
+</html>
